@@ -18,5 +18,8 @@ spec:
       containers:
       - name: spring-user
         image: choho97/stackup-user:78
+        envFrom:
+        - configMapRef:
+            name: my-test-config
         ports:
         - containerPort: 8080
