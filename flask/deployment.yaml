@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: flask-app
+  labels:
+    app: flask-app
+spec:
+  replicas: 2  # 필요한 경우 복제본 수를 조정하세요
+  selector:
+    matchLabels:
+      app: flask-app
+  template:
+    metadata:
+      labels:
+        app: flask-app
+    spec:
+      containers:
+      - name: flask-container
+        image: docker.io/choho97/flask-app:latest  # 이미지 태그는 Jenkinsfile에서 동적으로 설정
+        ports:
+        - containerPort: 5000  # Flask 기본 포트
+        envFrom:
+        - configMapRef:
+            name: my-test-config
