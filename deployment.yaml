@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: spring-service-1
+  name: spring-user
   namespace: default
   labels:
-    app: spring-service-1
+    app: spring-user
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: spring-service-1
+      app: spring-user
   template:
     metadata:
       labels:
-        app: spring-service-1
+        app: spring-user
     spec:
       containers:
-      - name: spring-service-1
-        image: choho97/stackup/spring_1:latest
+      - name: spring-user
+        image: choho97/stackup-user:45
         ports:
         - containerPort: 8080
