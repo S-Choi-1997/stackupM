@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: spring-user
-        image: choho97/stackup-user:62
+        image: choho97/stackup-user:64
         ports:
         - containerPort: 8080
