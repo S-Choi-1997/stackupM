@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: spring-board
-        image: choho97/stackup-board:latest
+        image: choho97/stackup-board:61
         ports:
         - containerPort: 8080
