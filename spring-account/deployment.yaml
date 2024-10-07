@@ -17,9 +17,6 @@ spec:
     spec:
       containers:
       - name: spring-account
-        image: choho97/stackup-account:65
-        envFrom:
-        - configMapRef:
-            name: my-test-config
+        image: choho97/stackup-account:66
         ports:
         - containerPort: 8080

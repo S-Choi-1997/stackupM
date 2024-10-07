@@ -17,9 +17,6 @@ spec:
     spec:
       containers:
       - name: spring-board
-        image: choho97/stackup-board:65
-        envFrom:
-        - configMapRef:
-            name: my-test-config
+        image: choho97/stackup-board:66
         ports:
         - containerPort: 8080
