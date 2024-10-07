@@ -15,5 +15,8 @@ spec:
       containers:
         - name: spring-frontend
           image: choho97/stackup-frontend:${IMAGE_TAG}
+          envFrom:
+        - configMapRef:
+            name: my-test-config
           ports:
             - containerPort: 80
