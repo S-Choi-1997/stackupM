@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: spring-service-1
+  name: spring-user
   namespace: default
   labels:
-    app: spring-service-1
+    app: spring-user
 spec:
   selector:
-    app: spring-service-1
+    app: spring-user
   ports:
   - protocol: TCP
     port: 80

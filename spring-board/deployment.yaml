@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: spring-service-3
+  name: spring-board
   namespace: default
   labels:
-    app: spring-service-3
+    app: spring-board
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: spring-service-3
+      app: spring-board
   template:
     metadata:
       labels:
-        app: spring-service-3
+        app: spring-board
     spec:
       containers:
-      - name: spring-service-3
-        image: choho97/stackup/spring_1:latest
+      - name: spring-board
+        image: choho97/stackup-board:latest
         ports:
         - containerPort: 8080
