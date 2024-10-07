@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-service-2
+  labels:
+    app: spring-service-2
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: spring-service-2
+  template:
+    metadata:
+      labels:
+        app: spring-service-2
+    spec:
+      containers:
+      - name: spring-service-2
+        image: choho97/stackup/spring_1:latest
+        ports:
+        - containerPort: 8080
