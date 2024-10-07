@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: spring-frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: spring-frontend
+  template:
+    metadata:
+      labels:
+        app: spring-frontend
+    spec:
+      containers:
+        - name: spring-frontend
+          image: choho97/stackup-frontend:${IMAGE_TAG}
+          ports:
+            - containerPort: 80
