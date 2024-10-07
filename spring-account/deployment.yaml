@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: spring-account
-        image: choho97/stackup-account:63
+        image: choho97/stackup-account:65
         ports:
         - containerPort: 8080
