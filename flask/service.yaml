@@ -1,11 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: spring-frontend
+  name: flask-service
+  namespace: default
 spec:
-  type: LoadBalancer
+  type: clusterIP
   ports:
     - port: 80
       targetPort: 80
   selector:
-    app: spring-frontend
+    app: flask-service
