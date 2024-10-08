@@ -20,6 +20,9 @@ spec:
         image: choho97/stackup-flask:latest  # docker.io 생략
         ports:
         - containerPort: 5000
+        env:
+        - name: FLASK_APP  # Flask가 실행할 애플리케이션 파일
+          value: "app.py"  # app.py 파일을 실행하도록 설정
         envFrom:
         - configMapRef:
             name: my-test-config
