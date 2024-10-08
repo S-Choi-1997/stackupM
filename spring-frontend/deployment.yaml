@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: stackup-frontend
+  namespace: default
   labels:
     app: stackup-frontend
 spec:
