@@ -6,7 +6,7 @@ metadata:
   labels:
     app: flask-app
 spec:
-  replicas: 2  # 필요한 경우 복제본 수를 조정하세요
+  replicas: 2
   selector:
     matchLabels:
       app: flask-app
@@ -17,9 +17,9 @@ spec:
     spec:
       containers:
       - name: flask-container
-        image: docker.io/choho97/flask-app:latest  # 이미지 태그는 Jenkinsfile에서 동적으로 설정
+        image: choho97/stackup-flask:latest  # docker.io 생략
         ports:
-        - containerPort: 5000  # Flask 기본 포트
+        - containerPort: 5000
         envFrom:
         - configMapRef:
             name: my-test-config
