@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: flask-container
-        image: docker.io/choho97/flask-app:latest  # 이미지 태그는 Jenkinsfile에서 동적으로 설정
+        image: docker.io/choho97/stackup-flask:25
         ports:
         - containerPort: 5000  # Flask 기본 포트
         envFrom:
