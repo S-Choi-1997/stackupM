@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: stackup-frontend
-        image: choho97/stackup-frontend:latest # Jenkins에서 업데이트된 이미지 태그가 반영됩니다.
+        image: choho97/stackup-frontend:38
         ports:
         - containerPort: 80
