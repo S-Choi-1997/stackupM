@@ -1,22 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: react-app
-  namespace: default
+  name: stackup-frontend
   labels:
-    app: react-app
+    app: stackup-frontend
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: react-app
+      app: stackup-frontend
   template:
     metadata:
       labels:
-        app: react-app
+        app: stackup-frontend
     spec:
       containers:
-      - name: react-container
-        image: choho97/stackup-react:latest
+      - name: stackup-frontend
+        image: choho97/stackup-frontend:latest # Jenkins에서 업데이트된 이미지 태그가 반영됩니다.
         ports:
-        - containerPort: 3000
+        - containerPort: 80
