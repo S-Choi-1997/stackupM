@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: flask-container
-        image: choho97/stackup-flask:138
+        image: choho97/stackup-flask:139
         ports:
         - containerPort: 5000
         env:
