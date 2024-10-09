@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: spring-board
-        image: choho97/stackup-board:111
+        image: choho97/stackup-board:112
         envFrom:
         - configMapRef:
             name: my-test-config
