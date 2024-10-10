@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: spring-account
-        image: choho97/stackup-account:120
+        image: choho97/stackup-account:121
         envFrom:
         - configMapRef:
             name: my-test-config
