@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: stackup-frontend
-        image: choho97/stackup-frontend:162
+        image: choho97/stackup-frontend:165
         ports:
         - containerPort: 80
